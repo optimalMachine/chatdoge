@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex; /* 플렉스박스를 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    min-height: 100vh; /* 뷰포트의 전체 높이 */
+}
+
+#logo-image {
+    width: 100%;
+    height: auto; 
+}
+
+#chat-container {
+    max-width: 300px; /* Use max-width instead of width for responsiveness */
+    width: 100%; /* Allows container to scale down on smaller screens */
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: auto;
+}
+
+#chat-box {
+    height: calc(100% - 60px); /* Adjust height based on other elements */
+    overflow-y: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#message-input {
+    width: calc(100% - 70px); /* Adjust width to fit the button */
+    padding: 5px;
+}
+
+#send-button {
+    width: 60px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    #chat-container {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    #message-input, #send-button {
+        width: auto; /* Auto width for better fit */
+        flex: 1; /* Flexbox for equal distribution */
+    }
+
+    #send-button {
+        min-width: 50px; /* Minimum width for readability */
+    }
+}
